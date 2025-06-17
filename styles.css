@@ -1,13 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .topnav{
-    background-color: #333;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding:0 20px;
+    background-color: darkblue;
     overflow: hidden;
     position: fixed;
     top:0;
     width: 100%;
     z-index:1000;
 }
-
-.topnav a{
+.nav-links{
+    display: flex;
+}
+.nav-links a{
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -23,9 +36,13 @@
 
 .topnav a.active{
     background-color: #04AA6D;
-    color: white;
+    color: black;
 }
-
+.logo{
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+}
 body {
   margin: 0;
   padding-top: 50px; /* adjust to match your .topnav height */
