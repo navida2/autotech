@@ -71,11 +71,11 @@ body {
    /* optional: rounded corners */
 }
 .mySlides img {
-  width: 100%;          /* Make image fill container */
-  height: auto;         /* Maintain aspect ratio */
-  display: block;       /* Remove extra spacing */
-  object-fit: contain;  /* Prevents distortion */
-  margin: 0 auto;       /* Center horizontally if needed */
+  width: 100%;          
+  height: auto;         
+  display: block;      
+  object-fit: contain;  
+  margin: 0 auto;       
 }
 
 
