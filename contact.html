@@ -5,16 +5,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation (same as your main page so it matches) -->
-  <div class="topnav">
-    <div class="logo">Autotech</div>
+ <div class="topnav">
+     <div class="logo">
+    <img src="logoauto-removebg-preview.png" alt="Autotech Logo">
+    Autotech
+  </div>
+    
     <div class="nav-links">
       <a href="main.html">Home</a>
       <a href="services.html">Services</a>
-      <a class="active" href="contact.html">Contact</a>
+      
+      <a class="active" href="#conact">Contact</a>
     </div>
   </div>
-
   <!-- Contact Page Content -->
   <div class="contact-page" style="padding: 40px; text-align: center;">
     <h1>Contact Us</h1>
@@ -36,19 +39,18 @@
     </iframe>
 
     <!-- Optional Contact Form -->
-    <h2>Send Us a Message</h2>
-    <form action="mailto:autotechofoxnard@gmail.com" method="post" enctype="text/plain" style="max-width: 400px; margin: 0 auto; text-align: left;">
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" style="width:100%; padding:8px;"><br><br>
+  <form action="https://formspree.io/f/mandbzyo" method="POST" class="contact-form">
+  <h2>Send Us a Message</h2>
 
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" style="width:100%; padding:8px;"><br><br>
+  <label for="email">Your Email</label>
+  <input type="email" id="email" name="email" required>
 
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="5" style="width:100%; padding:8px;"></textarea><br><br>
+  <label for="message">Your Message</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
 
-      <input type="submit" value="Send" style="padding:10px 20px;">
-    </form>
+  <button type="submit">Send</button>
+</form>
+
   </div>
 
 <footer class="site-footer">
