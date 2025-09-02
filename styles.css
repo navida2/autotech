@@ -28,16 +28,26 @@
     text-decoration: none;
     font-size: 17px;
 }
-
-.topnav a:hover{
-    background-color: #ddd;
-    color: black;
+.topnav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  display: inline-block;   /* keeps each link only as wide as its text */
+  transition: 0.3s ease;
+}
+.topnav a.active {
+  color: white;             /* gold accent */
+  border-bottom: 3px solid white;
+  padding-bottom: 4px;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
-.topnav a.active{
-    background-color: #04AA6D;
-    color: black;
+.topnav a:hover {
+  background-color: #e0e0e0;   /* gentle hover effect */
+  color: #000;
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -56,70 +66,19 @@ body {
   padding-top: 50px; /* adjust to match your .topnav height */
 }
 
-
-/* Gallery slideshow css */
-*{box-sizing: border-box;}
-
-.slideshow-container {
+.banner {
   width: 100%;
-  max-width: 1000px;    /* keeps it from being giant */
-  margin: 40px auto;    /* centers on page */
+  height: 500px;              /* adjust height (300–500px works well) */
   overflow: hidden;
-  border-radius: 10px;  /* optional: rounded corners */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* optional */
 }
 
-.slideshow-container img {
+.banner img {
   width: 100%;
-  height: 350px;        /* nice banner height */
-  object-fit: cover;    /* crops edges evenly, no distortion */
+  height: 100%;
+  object-fit: cover;          /* makes sure it fills the space nicely */
   display: block;
 }
 
-
-
-.mySlides img {
-  width: 100%;          
-  height: auto;         
-  display: block;      
-  object-fit: contain;  
-  margin: 0 auto;       
-}
-
-
-.prev, .next{
-    cursor:pointer;
-    position:absolute;
-    top:50%;
-    width:auto;
-    margin-top: -22px;
-    padding: 16px;
-    color:white;
-    font-weight: bold;
-    font-size:18px;
-    transition: 0.6 ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next{
-    right:0px;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover{
-    background-color: rgba(0,0,0,0.8);
-}
-
-.fade{
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade{
-    from{opacity:.4;}
-    to{opacity: 1;}
-}
 
 
 .type-text{
@@ -304,4 +263,35 @@ footer .copyright {
 
 .contact-form button:hover {
   background: #0056b3;
+}
+
+
+.welcome-section {
+  max-width: 850px;         
+  margin: 60px auto;        
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+  color: #333;
+  padding: 40px 20px;
+  background: #f9f9f9;      /* soft background */
+  border-radius: 12px;      /* rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* subtle shadow */
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #002366;           /* deep blue for brand feel */
+}
+
+.welcome-section p {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 20px;      /* spacing between paragraphs */
+}
+
+.welcome-section p strong {
+  color: #002366;           /* highlight key words */
 }
