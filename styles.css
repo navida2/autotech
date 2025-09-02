@@ -1,42 +1,60 @@
+/* ------------------------- */
+/* Global Reset & Base Styles */
+/* ------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.topnav{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    padding:0 20px;
-    background-color: darkblue;
-    overflow: hidden;
-    position: fixed;
-    top:0;
-    width: 100%;
-    z-index:1000;
+body {
+  margin: 0;
+  padding-top: 50px;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6fb;
+  color: #333;
 }
-.nav-links{
-    display: flex;
+
+/* ------------------------- */
+/* Navigation Bar */
+/* ------------------------- */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 20px;
+  background-color: darkblue;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
-.nav-links a{
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+
+.nav-links {
+  display: flex;
 }
+
+.nav-links a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
 .topnav a {
   color: white;
   text-decoration: none;
   padding: 8px 16px;
-  display: inline-block;  
+  display: inline-block;
   transition: 0.3s ease;
 }
+
 .topnav a.active {
-  color: white;           
+  color: white;
   border-bottom: 3px solid white;
   padding-bottom: 4px;
   font-weight: bold;
@@ -44,7 +62,7 @@
 }
 
 .topnav a:hover {
-  background-color: #e0e0e0;  
+  background-color: #e0e0e0;
   color: #000;
 }
 
@@ -58,112 +76,60 @@
 
 .logo img {
   height: 70px;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
-body {
-  margin: 0;
-  padding-top: 50px; 
-}
-
+/* ------------------------- */
+/* Banner Section */
+/* ------------------------- */
 .banner {
   width: 100%;
-  height: 450px;             
+  height: 450px;
   overflow: hidden;
 }
 
 .banner img {
   width: 100%;
   height: 100%;
-  object-fit: cover;          
+  object-fit: cover;
   display: block;
 }
 
-
-
-.type-text{
-    text-align: center;
-    margin-top: 20px;
-}
-
-.type-text h1{
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.type-text p{
-    font-size: 1.3em;
-    color:#333;
-
-}
-
-.site-footer {
-  background-color: #f8f1eb;
+/* ------------------------- */
+/* Welcome Section */
+/* ------------------------- */
+.welcome-section {
+  max-width: 850px;
+  margin: 60px auto;
+  text-align: center;
+  line-height: 1.8;
   color: #333;
   padding: 40px 20px;
-  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin: 0 auto;
+.welcome-section h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #002366;
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 250px;
-  margin: 10px 20px;
+.welcome-section p {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 20px;
 }
 
-.footer-section h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
+.welcome-section p strong {
+  color: #002366;
 }
 
-.footer-section p,
-.footer-section a {
-  font-size: 14px;
-  color: white;
-  text-decoration: none;
-}
-
-.footer-section a:hover {
-  text-decoration: underline;
-}
-
-.social-icons a {
-  margin-right: 10px;
-  display: inline-block;
-}
-
-
-.social-icons img {
-  height: 30px;
-  width: auto; /* maintain original aspect ratio */
-  margin-right: 10px;
-  vertical-align: middle;
-  transition: transform 0.3s ease;
-}
-
-
-.social-icons img:hover {
-  transform: scale(1.2);
-}
-
-
-
-
-footer .copyright {
-  text-align: center;
-  font-size: 13px;
-  margin-top: 30px;
-  color: #777;
-}
-
-
+/* ------------------------- */
+/* Services Section */
+/* ------------------------- */
 .services-section {
   text-align: center;
   padding: 50px 20px;
@@ -187,9 +153,9 @@ footer .copyright {
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
@@ -199,26 +165,109 @@ footer .copyright {
 
 .service-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;  /* makes them squares */
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
   display: block;
 }
 
-
 .service-card h3 {
   font-size: 1.2rem;
   margin: 0;
 }
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
+
+/* ------------------------- */
+/* Deal Section */
+/* ------------------------- */
+.deal-section {
   background: #f4f6fb;
+  padding: 60px 20px;
+}
+
+.deal-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.deal-info {
+  flex: 1 1 55%;
   color: #333;
 }
 
+.deal-info h2 {
+  font-size: 2rem;
+  color: #002366;
+  margin-bottom: 15px;
+}
+
+.deal-info p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.deal-points {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.point h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.deal-coupon {
+  flex: 1 1 35%;
+  text-align: center;
+  background: white;
+  border: 3px dashed #ffd700;
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  color: #002366;
+}
+
+.deal-coupon h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #002366;
+}
+
+.deal-coupon h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 10px 0 20px;
+}
+
+.deal-coupon .station {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.deal-coupon p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.deal-coupon .hours {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ------------------------- */
 /* Contact Page */
+/* ------------------------- */
 .contact-page {
   max-width: 1100px;
   margin: 60px auto;
@@ -246,7 +295,6 @@ body {
   align-items: flex-start;
 }
 
-/* Contact Info */
 .contact-info {
   flex: 1 1 45%;
   text-align: left;
@@ -272,7 +320,6 @@ body {
   text-decoration: underline;
 }
 
-/* Google Map */
 .map-container {
   margin-top: 20px;
   border-radius: 10px;
@@ -286,7 +333,6 @@ body {
   border: 0;
 }
 
-/* Contact Form */
 .contact-form {
   flex: 1 1 45%;
   background: white;
@@ -341,7 +387,9 @@ body {
   color: #000;
 }
 
+/* ------------------------- */
 /* Footer */
+/* ------------------------- */
 .site-footer {
   background: #002366;
   color: white;
@@ -355,147 +403,70 @@ body {
   font-size: 0.9rem;
 }
 
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  height: 30px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+
+/* ------------------------- */
 /* Responsive */
+/* ------------------------- */
 @media (max-width: 768px) {
   .contact-grid {
     flex-direction: column;
   }
-  .contact-info, .contact-form {
+  .contact-info,
+  .contact-form {
     flex: 1 1 100%;
   }
-}
-
-
-
-.welcome-section {
-  max-width: 850px;         
-  margin: 60px auto;        
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.8;
-  color: #333;
-  padding: 40px 20px;
-  background: #f9f9f9;      /* soft background */
-  border-radius: 12px;      /* rounded corners */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* subtle shadow */
-}
-
-.welcome-section h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #002366;           /* deep blue for brand feel */
-}
-
-.welcome-section p {
-  font-size: 1.15rem;
-  color: #444;
-  margin-bottom: 20px;      /* spacing between paragraphs */
-}
-
-.welcome-section p strong {
-  color: #002366;           /* highlight key words */
-}
-.deal-section {
-  background: #f4f6fb; /* soft background */
-  padding: 60px 20px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.deal-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1100px;
-  margin: 0 auto;
-  gap: 40px;
-}
-
-/* Left side */
-.deal-info {
-  flex: 1 1 55%;
-  color: #333;
-}
-
-.deal-info h2 {
-  font-size: 2rem;
-  color: #002366;
-  margin-bottom: 15px;
-}
-
-.deal-info p {
-  margin-bottom: 20px;
-  line-height: 1.6;
-  font-size: 1.05rem;
-}
-
-.deal-points {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.point h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  color: #000;
-}
-
-
-
-
-/* Right side (coupon card) */
-.deal-coupon {
-  flex: 1 1 35%;
-  text-align: center;
-  background: white;
-  border: 3px dashed #ffd700; /* coupon feel */
-  border-radius: 12px;
-  padding: 40px 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  color: #002366;
-}
-
-.deal-coupon h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 0;
-  color: #002366;
-}
-
-.deal-coupon h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 10px 0 20px;
-}
-
-.deal-coupon .station {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.deal-coupon p {
-  margin: 8px 0;
-  font-size: 1rem;
-}
-
-.deal-coupon .hours {
-  margin-top: 15px;
-  font-size: 1rem;
-  color: #444;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
   .deal-container {
     flex-direction: column;
     text-align: center;
   }
-  .deal-info {
-    flex: 1 1 100%;
-  }
+  .deal-info,
   .deal-coupon {
     flex: 1 1 100%;
   }
