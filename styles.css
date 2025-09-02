@@ -32,11 +32,11 @@
   color: white;
   text-decoration: none;
   padding: 8px 16px;
-  display: inline-block;   /* keeps each link only as wide as its text */
+  display: inline-block;  
   transition: 0.3s ease;
 }
 .topnav a.active {
-  color: white;             /* gold accent */
+  color: white;           
   border-bottom: 3px solid white;
   padding-bottom: 4px;
   font-weight: bold;
@@ -44,7 +44,7 @@
 }
 
 .topnav a:hover {
-  background-color: #e0e0e0;   /* gentle hover effect */
+  background-color: #e0e0e0;  
   color: #000;
 }
 
@@ -57,25 +57,25 @@
 }
 
 .logo img {
-  height: 70px;     /* controls size of your logo */
-  margin-right: 10px; /* space between logo and text */
+  height: 70px;
+  margin-right: 10px; 
 }
 
 body {
   margin: 0;
-  padding-top: 50px; /* adjust to match your .topnav height */
+  padding-top: 50px; 
 }
 
 .banner {
   width: 100%;
-  height: 450px;              /* adjust height (300–500px works well) */
+  height: 450px;             
   overflow: hidden;
 }
 
 .banner img {
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* makes sure it fills the space nicely */
+  object-fit: cover;          
   display: block;
 }
 
@@ -183,7 +183,7 @@ footer .copyright {
 }
 
 .service-card {
-  background: #90EE90;
+  background: #e6f0ff;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
@@ -199,10 +199,13 @@ footer .copyright {
 
 .service-card img {
   width: 100%;
-  max-width: 120px;
-  height: auto;
+  aspect-ratio: 1 / 1;  /* makes them squares */
+  object-fit: cover;
+  border-radius: 8px;
   margin-bottom: 15px;
+  display: block;
 }
+
 
 .service-card h3 {
   font-size: 1.2rem;
