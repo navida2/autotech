@@ -295,3 +295,107 @@ footer .copyright {
 .welcome-section p strong {
   color: #002366;           /* highlight key words */
 }
+.deal-section {
+  background: #f4f6fb; /* soft background */
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.deal-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Left side */
+.deal-info {
+  flex: 1 1 55%;
+  color: #333;
+}
+
+.deal-info h2 {
+  font-size: 2rem;
+  color: #002366;
+  margin-bottom: 15px;
+}
+
+.deal-info p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.deal-points {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.point h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+
+
+
+/* Right side (coupon card) */
+.deal-coupon {
+  flex: 1 1 35%;
+  text-align: center;
+  background: white;
+  border: 3px dashed #ffd700; /* coupon feel */
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  color: #002366;
+}
+
+.deal-coupon h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #002366;
+}
+
+.deal-coupon h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 10px 0 20px;
+}
+
+.deal-coupon .station {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.deal-coupon p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.deal-coupon .hours {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .deal-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .deal-info {
+    flex: 1 1 100%;
+  }
+  .deal-coupon {
+    flex: 1 1 100%;
+  }
+}
