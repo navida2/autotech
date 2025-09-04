@@ -725,3 +725,12 @@ body {
   display: block;
   pointer-events: none;   /* prevents hover glitches */
 }
+.smog-pricing ul {
+  margin: 0;              /* removes top/bottom extra spacing */
+  padding-left: 20px;     /* adjust indentation */
+  list-style-type: disc;  /* keep normal bullets */
+}
+
+.smog-pricing li {
+  margin: 4px 0;          /* tighter spacing between items */
+}
