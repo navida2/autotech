@@ -554,3 +554,42 @@ body {
   margin-top: 10px;
   font-style: italic;
 }
+.reviews-section {
+  background: linear-gradient(135deg, #004aad, #0073e6); /* Auto blue gradient */
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.reviews-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reviews-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.reviews-container p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.reviews-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: white;
+  color: #004aad;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.reviews-button:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.05);
+}
