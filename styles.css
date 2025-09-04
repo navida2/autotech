@@ -709,8 +709,8 @@ body {
   margin-top: 20px;
 }
 
-.point.combined h3:first-of-type {
-  margin-top: 0;
+.point.combined {
+  position: relative;   /* anchors the logo inside */
 }
 
 .logo-bottom {
@@ -720,6 +720,8 @@ body {
 }
 
 .logo-bottom img {
-  max-width: 140px; /* adjust size as needed */
+  max-width: 140px;
   height: auto;
+  display: block;
+  pointer-events: none;   /* prevents hover glitches */
 }
