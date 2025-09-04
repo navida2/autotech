@@ -630,3 +630,77 @@ body {
   justify-self: center; /* centers the block itself */
   max-width: 600px;     /* optional: keeps it from stretching too wide */
 }
+/* ------------------------- */
+/* Clean Truck Check Section */
+/* ------------------------- */
+.truck-info {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.truck-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.truck-container h1 {
+  font-size: 2.4rem;
+  color: #002366;
+  margin-bottom: 20px;
+}
+
+.truck-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.truck-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.point {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.point:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.point h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #004aad;
+}
+
+.point p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.certifications {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.certifications img {
+  max-width: 180px;
+  height: auto;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
