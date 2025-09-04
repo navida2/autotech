@@ -713,3 +713,13 @@ body {
   margin-top: 0;
 }
 
+.logo-bottom {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+
+.logo-bottom img {
+  max-width: 140px; /* adjust size as needed */
+  height: auto;
+}
