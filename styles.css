@@ -518,3 +518,39 @@ body {
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
 }
+.hours-section {
+  background-color: #f1f1f1;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hours-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hours-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 20px auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.hours-list li {
+  margin: 8px 0;
+}
+
+.note {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 10px;
+  font-style: italic;
+}
