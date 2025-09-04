@@ -194,69 +194,42 @@ body {
   gap: 40px;
 }
 
-.deal-info {
-  flex: 1 1 55%;
-  color: #333;
-}
-
-.deal-info h2 {
-  font-size: 2rem;
-  color: #002366;
-  margin-bottom: 15px;
-}
-
-.deal-info p {
-  margin-bottom: 20px;
-  line-height: 1.6;
-  font-size: 1.05rem;
-}
-
-.deal-points {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.point h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  color: #000;
-}
-
 .deal-coupon {
-  flex: 1 1 35%;
+  flex: 1 1 25%; /* make it narrower */
   text-align: center;
   background: white;
-  border: 3px dashed #ffd700;
-  border-radius: 12px;
-  padding: 40px 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  border: 2px dashed #ffd700; /* slightly thinner border */
+  border-radius: 10px;
+  padding: 25px 15px; /* reduce padding */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   color: #002366;
+  max-width: 320px; /* prevents it from stretching too wide */
+  margin: 0 auto; /* keeps it centered */
 }
 
 .deal-coupon h1 {
-  font-size: 3rem;
+  font-size: 2.2rem; /* smaller */
   font-weight: 700;
   margin: 0;
   color: #002366;
 }
 
 .deal-coupon h2 {
-  font-size: 1.8rem;
+  font-size: 1.3rem; /* smaller */
   font-weight: 600;
-  margin: 10px 0 20px;
+  margin: 8px 0 15px;
 }
 
 .deal-coupon .station {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 8px;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 .deal-coupon p {
-  margin: 8px 0;
-  font-size: 1rem;
+  margin: 5px 0;
+  font-size: 0.95rem;
 }
 
 .deal-coupon .hours {
@@ -592,4 +565,68 @@ body {
 .reviews-button:hover {
   background-color: #f1f1f1;
   transform: scale(1.05);
+}
+.smog-info {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.smog-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.smog-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.smog-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.smog-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.point h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #004aad;
+}
+
+.point p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.certifications {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.certifications img {
+  max-width: 150px;
+  height: auto;
+  background: white;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+.rv-center {
+  grid-column: 1 / -1;  /* pushes to its own row */
+  text-align: center;
+  justify-self: center; /* centers the block itself */
+  max-width: 600px;     /* optional: keeps it from stretching too wide */
 }
