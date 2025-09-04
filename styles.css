@@ -630,3 +630,62 @@ body {
   justify-self: center; /* centers the block itself */
   max-width: 600px;     /* optional: keeps it from stretching too wide */
 }
+
+.truck-info {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.truck-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.truck-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.truck-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.truck-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.truck-points .point h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #004aad;
+}
+
+.truck-points .point p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.certifications {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.certifications img {
+  max-width: 150px;
+  height: auto;
+  background: white;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
