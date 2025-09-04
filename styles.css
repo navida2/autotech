@@ -734,3 +734,6 @@ body {
 .smog-pricing li {
   margin: 4px 0;          /* tighter spacing between items */
 }
+.smog-pricing p {
+  margin: 0 0 5px;   /* no top margin, only a tiny 5px bottom gap */
+}
