@@ -1,5 +1,0 @@
-# Force HTTPS
-http://*   https://autotechofoxnard.com/:splat   301!
-
-# Redirect www to non-www
-https://www.autotechofoxnard.com/*   https://autotechofoxnard.com/:splat   301!
