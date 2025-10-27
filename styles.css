@@ -751,3 +751,25 @@ body {
   display: block;
   margin: 0 auto;
 }
+
+.deal-container {
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center;    /* center everything */
+  gap: 10px;              /* reduce vertical spacing */
+}
+
+.deal-coupon {
+  text-align: center;
+  border: 2px dashed #ffd700;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 400px;
+}
+
+.deal-coupon-image img {
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
