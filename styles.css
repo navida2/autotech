@@ -953,3 +953,135 @@ body {
     flex-direction: column;
   }
 }
+/* =========================
+   MOBILE FIX — FINAL
+========================= */
+
+@media (max-width: 768px) {
+
+  /* ---------- GLOBAL ---------- */
+  body {
+    padding-top: 90px; /* space for fixed nav */
+  }
+
+  h1, h2 {
+    line-height: 1.2;
+  }
+
+  /* ---------- NAVBAR ---------- */
+  .topnav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 12px;
+  }
+
+  .logo {
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .logo img {
+    height: 55px;
+    margin: 0;
+  }
+
+  .call-btn {
+    margin: 8px 0 0 0;
+    padding: 10px 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    height: auto;
+    padding: 70px 20px;
+    text-align: center;
+  }
+
+  .hero-overlay {
+    background: rgba(0,0,0,0.65);
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-rating {
+    margin: 15px auto 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-call,
+  .hero-book {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  .welcome-section,
+  .about-section,
+  .reviews-section,
+  .hours-section,
+  .services-section,
+  .deal-section {
+    padding: 40px 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .about-info {
+    text-align: center;
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---------- REVIEWS ---------- */
+  .rating-image img {
+    max-width: 180px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
