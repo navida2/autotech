@@ -933,16 +933,15 @@ body {
   to {
     background-size: 100%;
   }
-}
-/* =========================
-   MOBILE RESPONSIVE - COMPLETE
+}/* =========================
+   MOBILE RESPONSIVE - COMPLETE & FIXED
 ========================= */
 
 @media (max-width: 768px) {
 
   /* ---------- BODY ---------- */
   body {
-    padding-top: 60px;
+    padding-top: 80px;
     padding-left: 0;
     padding-right: 0;
     overflow-x: hidden;
@@ -955,6 +954,9 @@ body {
     padding: 8px;
     flex-direction: column;
     gap: 8px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
   }
 
   .logo {
@@ -994,6 +996,7 @@ body {
     background-size: cover !important;
     background-position: center center !important;
     position: relative;
+    margin-top: 0;
   }
 
   .hero-overlay {
@@ -1051,13 +1054,15 @@ body {
   .banner {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    height: 200px;
+    height: 250px;
+    overflow: visible;
   }
 
   .banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
   }
 
   /* ---------- WELCOME SECTION ---------- */
@@ -1194,15 +1199,16 @@ body {
     max-width: 280px;
   }
 
-  /* ---------- CONTACT PAGE ---------- */
+  /* ---------- CONTACT PAGE (FIXED TOP CUTOFF) ---------- */
   .contact-page {
     width: 100%;
-    padding: 35px 15px;
-    margin: 20px auto;
+    padding: 80px 15px 35px 15px;
+    margin: 0 auto;
   }
 
   .contact-page h1 {
     font-size: 1.5rem !important;
+    margin-top: 0;
   }
 
   .contact-grid {
@@ -1215,16 +1221,37 @@ body {
     flex: 1 1 100%;
   }
 
-  /* ---------- SMOG/TRUCK INFO ---------- */
+  .map-container {
+    margin-top: 20px;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  /* ---------- SMOG/TRUCK INFO (FIXED TOP CUTOFF) ---------- */
   .smog-info,
   .truck-info {
     width: 100%;
-    padding: 35px 15px;
+    padding: 80px 15px 35px 15px;
+    margin-top: 0;
+  }
+
+  .smog-container,
+  .truck-container {
+    padding-top: 0;
   }
 
   .smog-container h1,
   .truck-container h1 {
     font-size: 1.5rem !important;
+    margin-top: 0;
+  }
+
+  .smog-container p,
+  .truck-container p {
+    font-size: 0.95rem;
   }
 
   .smog-points,
@@ -1235,6 +1262,7 @@ body {
 
   .point {
     padding: 20px;
+    padding-bottom: 20px;
   }
 
   .point h3 {
@@ -1245,22 +1273,58 @@ body {
     font-size: 0.9rem;
   }
 
-  .certifications {
-    gap: 20px;
+  /* Fix combined boxes with logos */
+  .point.combined {
+    position: relative;
+    padding-bottom: 70px;
   }
 
-  .certifications img {
-    max-width: 120px;
+  .logo-bottom {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
 
   .logo-bottom img {
     max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
-  /* ---------- FOOTER ---------- */
+  .certifications {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .certifications img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  .smog-pricing ul {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+
+  .smog-pricing li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+
+  .smog-pricing p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+
+  /* ---------- FOOTER (FIXED CUTOFF) ---------- */
   .site-footer {
     width: 100%;
-    padding: 25px 15px;
+    padding: 35px 15px;
+    overflow: visible;
+    min-height: auto;
   }
 
   .footer-container {
@@ -1270,17 +1334,39 @@ body {
   }
 
   .footer-section {
-    margin: 0;
+    margin: 10px 0;
+    overflow: visible;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-section p,
+  .footer-section a {
+    font-size: 0.9rem;
+  }
+
+  .footer-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
   }
 
   .social-icons {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
   }
 
   .social-icons img {
-    height: 25px;
+    height: auto;
+    max-height: 30px;
+    width: auto;
+    max-width: 40px;
   }
 
   /* ---------- GLOBAL TEXT SIZING ---------- */
@@ -1307,12 +1393,17 @@ body {
 /* ---------- EXTRA SMALL PHONES ---------- */
 @media (max-width: 380px) {
   body {
-    padding-top: 70px;
+    padding-top: 90px;
   }
 
   .nav-links a {
     font-size: 10px;
     padding: 5px 6px;
+  }
+
+  .hero {
+    min-height: 450px;
+    padding: 40px 15px;
   }
 
   .hero h1 {
@@ -1334,5 +1425,13 @@ body {
 
   .logo img {
     height: 40px;
+  }
+
+  h1 {
+    font-size: 1.3rem !important;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
   }
 }
