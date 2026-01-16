@@ -936,90 +936,93 @@ body {
 }
 
 /* =========================
-   MOBILE RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 80px 6%;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-}/* =========================
-   MOBILE FIX — IMPROVED
+   MOBILE RESPONSIVE — FIXED
 ========================= */
 
 @media (max-width: 768px) {
 
-  /* ---------- GLOBAL ---------- */
+  /* ---------- RESET ---------- */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
-    padding-top: 70px; /* reduced from 90px */
+    padding-top: 140px; /* space for taller mobile nav */
   }
 
-  h1 {
-    font-size: 1.8rem !important;
-    line-height: 1.3;
-  }
-
-  h2 {
-    font-size: 1.5rem !important;
-    line-height: 1.3;
-  }
-
-  /* ---------- NAVBAR ---------- */
+  /* ---------- NAVIGATION ---------- */
   .topnav {
     height: auto;
-    padding: 8px 15px;
+    padding: 10px;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
   }
 
+  /* Logo section */
   .logo {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 100%;
+    gap: 8px;
   }
 
   .logo img {
-    height: 50px;
-    margin-right: 8px;
+    height: 45px;
+    margin: 0;
   }
 
+  /* Call button - move below nav links */
+  .call-btn {
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    width: 90%;
+    max-width: 280px;
+    text-align: center;
+    order: 3; /* moves it to bottom */
+  }
+
+  /* Navigation links */
   .nav-links {
-    width: 100%;
-    justify-content: center;
+    display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    justify-content: center;
+    width: 100%;
+    gap: 4px;
+    order: 2;
   }
 
   .nav-links a {
-    font-size: 13px;
-    padding: 8px 12px;
+    font-size: 12px;
+    padding: 8px 10px;
+    white-space: nowrap;
   }
 
-  .call-btn {
-    margin: 10px auto 0;
-    padding: 8px 16px;
-    font-size: 0.9rem;
+  /* Specific fix for long link text */
+  .nav-links a:nth-child(4) { /* Clean Truck Check */
+    font-size: 11px;
   }
 
-  /* ---------- HERO ---------- */
+  /* ---------- HERO SECTION ---------- */
   .hero {
     height: auto;
-    min-height: 60vh;
-    padding: 60px 20px;
-    background-position: center center;
-    background-attachment: scroll; /* prevents parallax issues */
+    min-height: 500px;
+    padding: 50px 20px;
+    background-position: center;
+    background-size: cover;
+    margin-top: 0;
   }
 
   .hero-overlay {
-    background: rgba(0, 0, 0, 0.7); /* darker for readability */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.5)
+    );
   }
 
   .hero-content {
@@ -1028,77 +1031,92 @@ body {
   }
 
   .hero h1 {
-    font-size: 2rem !important;
-    margin-bottom: 12px;
+    font-size: 1.75rem !important;
+    margin-bottom: 15px;
+    line-height: 1.2;
   }
 
   .hero p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
     margin-bottom: 15px;
   }
 
   .hero-rating {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-bottom: 20px;
+    display: block;
   }
 
   .hero-buttons {
+    display: flex;
     flex-direction: column;
     gap: 12px;
-    align-items: stretch;
+    width: 100%;
+    align-items: center;
   }
 
   .hero-call,
   .hero-book {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-    padding: 12px 20px;
+    width: 90%;
+    max-width: 280px;
+    padding: 14px 20px;
+    font-size: 0.95rem;
     text-align: center;
   }
 
   /* ---------- BANNER ---------- */
   .banner {
-    height: 250px; /* shorter on mobile */
+    height: 200px;
+    margin-top: 0;
   }
 
   /* ---------- WELCOME SECTION ---------- */
   .welcome-section {
     margin: 30px 15px;
-    padding: 25px 15px;
+    padding: 30px 20px;
   }
 
   .welcome-section h1 {
-    font-size: 1.8rem !important;
+    font-size: 1.6rem !important;
+    line-height: 1.3;
   }
 
   .welcome-section p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   /* ---------- SERVICES ---------- */
   .services-section {
-    padding: 35px 15px;
+    padding: 40px 15px;
+  }
+
+  .services-section h1 {
+    font-size: 1.6rem !important;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 0 10px;
   }
 
   .service-card {
-    padding: 18px;
+    padding: 20px;
   }
 
-  /* ---------- ABOUT ---------- */
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  /* ---------- ABOUT SECTION ---------- */
   .about-section {
     padding: 40px 15px;
   }
 
   .about-container {
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
   }
 
   .about-info {
@@ -1106,46 +1124,28 @@ body {
   }
 
   .about-info h2 {
-    font-size: 1.6rem !important;
+    font-size: 1.5rem !important;
+  }
+
+  .about-info p {
+    font-size: 0.95rem;
   }
 
   .about-image img {
-    max-width: 200px;
+    max-width: 220px;
   }
 
-  /* ---------- DEAL SECTION ---------- */
-  .deal-section {
+  /* ---------- HOURS SECTION ---------- */
+  .hours-section {
     padding: 40px 15px;
   }
 
-  .deal-container {
-    gap: 20px;
-  }
-
-  .deal-coupon {
-    max-width: 100%;
-    padding: 20px 15px;
-  }
-
-  .deal-coupon h1 {
-    font-size: 1.8rem !important;
-  }
-
-  .deal-coupon h2 {
-    font-size: 1.1rem !important;
-  }
-
-  /* ---------- HOURS ---------- */
-  .hours-section {
-    padding: 35px 15px;
-  }
-
   .hours-container h2 {
-    font-size: 1.6rem !important;
+    font-size: 1.5rem !important;
   }
 
   .hours-list {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   /* ---------- REVIEWS ---------- */
@@ -1154,25 +1154,63 @@ body {
   }
 
   .reviews-container h2 {
-    font-size: 1.6rem !important;
+    font-size: 1.5rem !important;
   }
 
   .reviews-container p {
+    font-size: 0.95rem;
+  }
+
+  .reviews-button {
     font-size: 1rem;
+    padding: 12px 24px;
   }
 
   .rating-image img {
-    max-width: 160px;
+    max-width: 150px;
+  }
+
+  /* ---------- DEAL SECTION ---------- */
+  .deal-section {
+    padding: 40px 15px;
+  }
+
+  .deal-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .deal-coupon {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .deal-coupon h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .deal-coupon h2 {
+    font-size: 1.1rem !important;
+  }
+
+  .deal-coupon-image img {
+    width: 100%;
+    max-width: 280px;
   }
 
   /* ---------- CONTACT PAGE ---------- */
   .contact-page {
-    margin: 30px 15px;
-    padding: 25px 15px;
+    margin: 30px auto;
+    padding: 30px 15px;
+  }
+
+  .contact-page h1 {
+    font-size: 1.8rem !important;
   }
 
   .contact-grid {
     flex-direction: column;
+    gap: 30px;
   }
 
   .contact-info,
@@ -1180,10 +1218,15 @@ body {
     flex: 1 1 100%;
   }
 
-  /* ---------- SMOG/TRUCK INFO ---------- */
+  /* ---------- SMOG/TRUCK PAGES ---------- */
   .smog-info,
   .truck-info {
     padding: 40px 15px;
+  }
+
+  .smog-container h1,
+  .truck-container h1 {
+    font-size: 1.6rem !important;
   }
 
   .smog-points,
@@ -1192,27 +1235,69 @@ body {
     gap: 20px;
   }
 
+  .point h3 {
+    font-size: 1.1rem;
+  }
+
+  .point p {
+    font-size: 0.9rem;
+  }
+
+  .certifications {
+    gap: 20px;
+  }
+
   .certifications img {
-    max-width: 120px;
+    max-width: 100px;
   }
 
   /* ---------- FOOTER ---------- */
   .site-footer {
-    padding: 25px 15px;
+    padding: 30px 15px;
+    margin-top: 40px;
   }
 
   .footer-container {
     flex-direction: column;
     text-align: center;
-    gap: 20px;
+    gap: 25px;
   }
 
   .footer-section {
-    margin: 10px 0;
+    margin: 0;
   }
 
   .social-icons {
     display: flex;
     justify-content: center;
+    gap: 10px;
+  }
+
+  .social-icons img {
+    height: 25px;
+  }
+}
+
+/* ---------- EXTRA SMALL PHONES ---------- */
+@media (max-width: 380px) {
+  body {
+    padding-top: 160px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .logo {
+    font-size: 0.9rem;
+  }
+
+  .logo img {
+    height: 40px;
   }
 }
