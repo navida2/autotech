@@ -773,3 +773,174 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+.call-btn {
+  margin-left: 20px;
+  padding: 10px 18px;
+  background: #00c2ff;              /* bright CTA blue */
+  color: #002f6c;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;             /* pill shape */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.call-btn:hover {
+  background: #ffffff;
+  color: #004aad;
+  transform: translateY(-2px);
+}
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url("/images/autotech exter.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  color: white;
+
+  /* background zoom animation */
+  animation: heroBgZoom 1.2s ease-out forwards;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.25)
+  );
+}
+
+/* =========================
+   HERO CONTENT ANIMATION
+========================= */
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
+
+  opacity: 0;
+  animation: heroFadeUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #eaeaea;
+}
+
+.hero-rating {
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.hero-rating span {
+  margin-left: 8px;
+  color: #ccc;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+
+  opacity: 0;
+  animation: heroFadeUp 1s ease-out forwards;
+  animation-delay: 0.9s;
+}
+
+.hero-call,
+.hero-book {
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+/* Call button */
+.hero-call {
+  background: #004aad;
+  color: white;
+}
+
+.hero-call:hover {
+  background: #00337f;
+  transform: translateY(-2px);
+}
+
+/* Book button */
+.hero-book {
+  background: #f5a623;
+  color: #222;
+}
+
+.hero-book:hover {
+  background: #ffb845;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroBgZoom {
+  from {
+    background-size: 110%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 80px 6%;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
